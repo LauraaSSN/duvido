@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Quicksand&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --branco: #fff;
+    --cinza:  #ecf0f1;
+    --cinza-escuro:  #b2b6b8;
+    --azul-escuro: #121a35;
+    --azul-medio: #122839;
+    --azul-claro: #08c4ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--azul-escuro);
+    font-family: "Quicksand", sans-serif;
+}
+
+
+
+/* BARRINHA SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+html ::-webkit-scrollbar {
+    width: 0px;
+}
+/* BARRINHA SCROLL */
+
+
+
+
+/* BARRA DE NAVEGAÇÃO */
+nav {
+    position: fixed;
+    margin-top: 0;
+    background-color: var(--cinza);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    z-index: 2;
+}
+.img {
+    width: 40px;
+    height: auto;
+    justify-content: left;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.barra {
+    position: relative;
+    cursor: pointer;
+    color: var(--azul-escuro);
+    text-decoration: none;
+    font-size: 28px;
+    margin-left: 88%;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+}
+.barra::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(--azul-escuro);
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+.barra:hover {
+    color: var(--cinza);
+}
+.barra:hover::after {
+    scale: 1 1;
+}
+/* BARRA DE NAVEGAÇÃO */
+
+
+
+
+
+
+/* CARDS */
+.main {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    margin: 34px;
+    background-color: var(--cinza);
+    width: 380px;
+    height: 460px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: var(--azul-medio) 0px 7px 15px 0px;
+    text-align: center;
+    
+    z-index: 1;
+}
+ img {
+    width: 100%;
+    border-radius: 20px;
+}
+a,
+.text_card {
+    color: var(--azul-escuro);
+    text-decoration: none;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.text_card {
+    padding-top: 10px;
+}
+.text_card:hover {
+    color: var(--azul-medio);
+}
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+    background-color: var(--cinza);
+}
+/*CARDS */
